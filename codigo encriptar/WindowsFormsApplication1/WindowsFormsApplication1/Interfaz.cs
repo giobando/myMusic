@@ -27,7 +27,7 @@ namespace WindowsFormsApplication1
             String user = _TextBoxUser.Text;
             String password = _textBoxPassword.Text;
             SHA_256 _Encriptar = new SHA_256();
-            String hex = _Encriptar.GetSHA_256(password + user);
+            String hex = _Encriptar.GetSHA_256(user+ password + user);
             _textBoxEncriptado.Text = hex;
             //MessageBox.Show("encriptado: " + hex);
         }
