@@ -1,0 +1,2 @@
+restricciones al hacer un tweet:
+-no se puede realizar tweet con el mismo contenido al publicar consecutivamente!
