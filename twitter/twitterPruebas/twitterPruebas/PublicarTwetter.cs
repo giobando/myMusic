@@ -29,8 +29,21 @@ namespace twitterPruebas
             }
             catch (Exception ex)
             {
-                //ManejoDeErrores.FachadaManejoErrores manejoError = new FachadaManejoErrores();
-                //manejoError.GuardarLog(Utilitarios.Constantes.Constantes.CategoriaDeCapa.LogicaNegocios, this.GetType().ToString(), MethodInfo.GetCurrentMethod().Name, ex.Message);
+                Console.WriteLine("Error" + ex);
+                return false;
+            }
+        }
+
+        public bool CountHashtag(string strMensaje)
+        {
+            var twitter = new MetodosTwitter(_oauth);
+            try
+            {
+                twitter.GetMentions();
+                return true;
+            }
+            catch (Exception ex)
+            {
                 Console.WriteLine("Error" + ex);
                 return false;
             }

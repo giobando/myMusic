@@ -37,6 +37,7 @@ namespace twitterPruebas
             this._oauth = oauth;
         }
 
+        //publica tweets!
         public void UpdateStatus(string message)
         {
             new RequestBuilder(_oauth, "POST", "https://api.twitter.com/1.1/statuses/update.json")
